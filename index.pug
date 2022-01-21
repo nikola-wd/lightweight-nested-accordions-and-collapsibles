@@ -1,0 +1,138 @@
+- var text =  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda" 
+- var imgSrc = "https://source.unsplash.com/300x200"
+- var titles = ["Heading 1 that is very long", "Heading 2", "Heading 3"]
+- levels_deep = 3
+
+
+
+h1 4.76KB (3.39KB minified) solution for a collapsible and accordion
+
+
+h2 Dropdown (Single Collapsible)
+
+.dropdowns-wrap
+	.collapsible(class="collapsed remove-this-theme-class", aria-expanded="false", data-collapsible-dropdown, data-toggle-mode="hover")
+		button.collapsible__trigger Single Collapsible 1
+			span.chevron
+		.collapsible__content
+			.collapsible__content__inner
+				ul
+					li Dropdown Item 1
+					li Dropdown Item 2
+					li Dropdown Item 3
+					li Dropdown Item 4
+					li Dropdown Item 5
+
+	.collapsible(class="uncollapsed remove-this-theme-class", aria-expanded="true", data-collapsible-dropdown)
+		button.collapsible__trigger Single Collapsible 2
+			span.chevron
+		.collapsible__content
+			.collapsible__content__inner
+				p Collapsible single content	
+
+	.collapsible(class="uncollapsed remove-this-theme-class", aria-expanded="true", data-collapsible-dropdown)
+		button.collapsible__trigger Single Collapsible 3
+			span.chevron
+		.collapsible__content
+			.collapsible__content__inner
+				p Collapsible single content
+			
+			
+h2 One level accordion (Default)
+.accordion(class="remove-this-theme-class")
+	each title3, index3 in titles
+		- var activeClass = "collapsed"
+		- var aria = "false"
+		if index3 === 2
+			- var activeClass = "uncollapsed"
+			- var aria = "true"
+		.collapsible(class=activeClass, aria-expanded=aria)
+			button.collapsible__trigger #{title} #{title2} #{title3}
+				span.chevron
+			.collapsible__content
+				.collapsible__content__inner
+					.left
+						- var textIndex3 = 0
+						while textIndex3 < index3 + 1
+							p #{textIndex3++} #{text}
+					.right
+						img(src=imgSrc)
+
+h2 One level accordion (Togglable)
+.accordion(data-collapse-siblings, class="remove-this-theme-class")
+	each title3, index3 in titles
+		- var activeClass = "collapsed"
+		- var aria = "false"
+		if index3 === 2
+			- var activeClass = "uncollapsed"
+			- var aria = "true"
+		.collapsible(class=activeClass, aria-expanded=aria)
+			button.collapsible__trigger #{title} #{title2} #{title3}
+				span.chevron
+			.collapsible__content
+				.collapsible__content__inner
+					.left
+						- var textIndex3 = 0
+						while textIndex3 < index3 + 1
+							p #{textIndex3++} #{text}
+					.right
+						img(src=imgSrc)
+
+h2 Nested Accordion
+
+//- .accordion(data-collapse-siblings)
+.accordion(data-collapse-siblings, class="remove-this-theme-class")
+	each title, index in titles
+		- var activeClass = "collapsed"
+		- var aria = "false"
+		if index === 0
+			- var activeClass = "uncollapsed"
+			- var aria = "true"
+		.collapsible(class=activeClass, aria-expanded=aria)
+			button.collapsible__trigger #{title}
+				span.chevron
+			.collapsible__content
+				.collapsible__content__inner
+					if index === 0
+						.accordion
+							each title2, index2 in titles
+								- var activeClass = "collapsed"
+								- var aria = "false"
+								if index2 === 1
+									- var activeClass = "uncollapsed"
+									- var aria = "true"
+								.collapsible(class=activeClass, aria-expanded=aria)
+									button.collapsible__trigger #{title} #{title2}
+										span.chevron
+									.collapsible__content
+										.collapsible__content__inner
+											if index2 === 1
+												.accordion(data-collapse-siblings='')
+													each title3, index3 in titles
+														- var activeClass = "collapsed"
+														- var aria = "false"
+														if index3 === 2
+															- var activeClass = "uncollapsed"
+															- var aria = "true"
+														.collapsible(class=activeClass, aria-expanded=aria)
+															button.collapsible__trigger #{title} #{title2} #{title3}
+																span.chevron
+															.collapsible__content
+																.collapsible__content__inner
+																	.left
+																		- var textIndex3 = 0
+																		while textIndex3 < index3 + 1
+																			p #{textIndex3++} #{text}
+																	.right
+																		img(src=imgSrc)
+											else 
+												- var textIndex2 = 0
+												while textIndex2 < index2 + 1
+													p #{textIndex2++} #{text}
+					else
+						.left
+							- var textIndex = 0
+							while textIndex < index + 1
+								p #{textIndex++} #{text}
+						.right
+							img(src=imgSrc)

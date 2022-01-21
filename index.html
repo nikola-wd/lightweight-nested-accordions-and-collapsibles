@@ -1,0 +1,254 @@
+<h1>4.76KB (3.39KB minified) solution for a collapsible and accordion</h1>
+<h2>Dropdown (Single Collapsible)</h2>
+<div class="dropdowns-wrap">
+  <div class="collapsible collapsed remove-this-theme-class" aria-expanded="false"
+    data-collapsible-dropdown="data-collapsible-dropdown" data-toggle-mode="hover">
+    <button class="collapsible__trigger">Single Collapsible 1<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <ul>
+          <li>Dropdown Item 1</li>
+          <li>Dropdown Item 2</li>
+          <li>Dropdown Item 3</li>
+          <li>Dropdown Item 4</li>
+          <li>Dropdown Item 5</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible uncollapsed remove-this-theme-class" aria-expanded="true"
+    data-collapsible-dropdown="data-collapsible-dropdown">
+    <button class="collapsible__trigger">Single Collapsible 2<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <p>Collapsible single content </p>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible uncollapsed remove-this-theme-class" aria-expanded="true"
+    data-collapsible-dropdown="data-collapsible-dropdown">
+    <button class="collapsible__trigger">Single Collapsible 3<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <p>Collapsible single content</p>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>One level accordion (Default)</h2>
+<div class="accordion remove-this-theme-class">
+  <div class="collapsible collapsed" aria-expanded="false">
+    <button class="collapsible__trigger"> Heading 1 that is very long<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible collapsed" aria-expanded="false">
+    <button class="collapsible__trigger"> Heading 2<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible uncollapsed" aria-expanded="true">
+    <button class="collapsible__trigger"> Heading 3<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>One level accordion (Togglable)</h2>
+<div class="accordion remove-this-theme-class" data-collapse-siblings="data-collapse-siblings">
+  <div class="collapsible collapsed" aria-expanded="false">
+    <button class="collapsible__trigger"> Heading 1 that is very long<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible collapsed" aria-expanded="false">
+    <button class="collapsible__trigger"> Heading 2<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible uncollapsed" aria-expanded="true">
+    <button class="collapsible__trigger"> Heading 3<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Nested Accordion</h2>
+<div class="accordion remove-this-theme-class" data-collapse-siblings="data-collapse-siblings">
+  <div class="collapsible uncollapsed" aria-expanded="true">
+    <button class="collapsible__trigger">Heading 1 that is very long<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="accordion">
+          <div class="collapsible collapsed" aria-expanded="false">
+            <button class="collapsible__trigger">Heading 1 that is very long Heading 1 that is very long<span
+                class="chevron"></span></button>
+            <div class="collapsible__content">
+              <div class="collapsible__content__inner">
+                <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam
+                  ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible uncollapsed" aria-expanded="true">
+            <button class="collapsible__trigger">Heading 1 that is very long Heading 2<span
+                class="chevron"></span></button>
+            <div class="collapsible__content">
+              <div class="collapsible__content__inner">
+                <div class="accordion" data-collapse-siblings="">
+                  <div class="collapsible collapsed" aria-expanded="false">
+                    <button class="collapsible__trigger">Heading 1 that is very long Heading 2 Heading 1 that is very
+                      long<span class="chevron"></span></button>
+                    <div class="collapsible__content">
+                      <div class="collapsible__content__inner">
+                        <div class="left">
+                          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas
+                            laborum, veniam ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda
+                          </p>
+                        </div>
+                        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collapsible collapsed" aria-expanded="false">
+                    <button class="collapsible__trigger">Heading 1 that is very long Heading 2 Heading 2<span
+                        class="chevron"></span></button>
+                    <div class="collapsible__content">
+                      <div class="collapsible__content__inner">
+                        <div class="left">
+                          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas
+                            laborum, veniam ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda
+                          </p>
+                          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas
+                            laborum, veniam ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda
+                          </p>
+                        </div>
+                        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collapsible uncollapsed" aria-expanded="true">
+                    <button class="collapsible__trigger">Heading 1 that is very long Heading 2 Heading 3<span
+                        class="chevron"></span></button>
+                    <div class="collapsible__content">
+                      <div class="collapsible__content__inner">
+                        <div class="left">
+                          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas
+                            laborum, veniam ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda
+                          </p>
+                          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas
+                            laborum, veniam ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda
+                          </p>
+                          <p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas
+                            laborum, veniam ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda
+                          </p>
+                        </div>
+                        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible collapsed" aria-expanded="false">
+            <button class="collapsible__trigger">Heading 1 that is very long Heading 3<span
+                class="chevron"></span></button>
+            <div class="collapsible__content">
+              <div class="collapsible__content__inner">
+                <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam
+                  ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+                <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam
+                  ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+                <p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam
+                  ea quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible collapsed" aria-expanded="false">
+    <button class="collapsible__trigger">Heading 2<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="collapsible collapsed" aria-expanded="false">
+    <button class="collapsible__trigger">Heading 3<span class="chevron"></span></button>
+    <div class="collapsible__content">
+      <div class="collapsible__content__inner">
+        <div class="left">
+          <p>0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+          <p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque labore dolores quas laborum, veniam ea
+            quod sint odio temporibus itaque illum harum numquam voluptate assumenda</p>
+        </div>
+        <div class="right"><img src="https://source.unsplash.com/300x200" /></div>
+      </div>
+    </div>
+  </div>
+</div>
